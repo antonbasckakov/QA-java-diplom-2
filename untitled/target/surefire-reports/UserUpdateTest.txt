@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: UserUpdateTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.679 s <<< FAILURE! - in UserUpdateTest
+updateNameUserwithToken(UserUpdateTest)  Time elapsed: 0.165 s  <<< ERROR!
+java.lang.IllegalArgumentException: Header value cannot be null
+	at UserUpdateTest.updateNameUserwithToken(UserUpdateTest.java:48)
+
+updateEmailUserwithToken(UserUpdateTest)  Time elapsed: 0.18 s  <<< ERROR!
+java.lang.IllegalArgumentException: Header value cannot be null
+	at UserUpdateTest.updateEmailUserwithToken(UserUpdateTest.java:18)
+
