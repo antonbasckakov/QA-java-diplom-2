@@ -25,8 +25,8 @@ public class CreateOrderTest {
         assertEquals(200,responseOrder.getStatusCode());
         assertEquals("true",responseOrder.jsonPath().getString("success"));
         assertEquals("Экзо-плантаго традиционный-галактический бургер",responseOrder.jsonPath().getString("name"));
-        assertEquals("61c0c5a71d1f82001bdaaa79",responseOrder.jsonPath().getString("order.ingredients[0]._id"));
-        assertEquals("61c0c5a71d1f82001bdaaa74",responseOrder.jsonPath().getString("order.ingredients[1]._id"));
+        assertEquals(Data.FIRSTINGREDIENT,responseOrder.jsonPath().getString("order.ingredients[0]._id"));
+        assertEquals(Data.TWOINGREDIENT,responseOrder.jsonPath().getString("order.ingredients[1]._id"));
         userSteps.deleteUser(responseUser.jsonPath().getString("accessToken"),Pens.USER_REMOVAL_DELETE);
     }
 

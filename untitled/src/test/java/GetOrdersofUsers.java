@@ -20,8 +20,8 @@ public class GetOrdersofUsers {
         assertEquals(200,responseOrder.getStatusCode());
         assertEquals("true",responseOrder.jsonPath().getString("success"));
         assertEquals("[Экзо-плантаго традиционный-галактический бургер]",responseOrder.jsonPath().getString("orders.name"));
-        assertEquals("61c0c5a71d1f82001bdaaa79",responseOrder.jsonPath().getString("orders.ingredients[0]"));
-        assertEquals("61c0c5a71d1f82001bdaaa74",responseOrder.jsonPath().getString("orders.ingredients[1]"));
+        assertEquals(Data.FIRSTINGREDIENT,responseOrder.jsonPath().getString("orders.ingredients[0]"));
+        assertEquals(Data.TWOINGREDIENT,responseOrder.jsonPath().getString("orders.ingredients[1]"));
         userSteps.deleteUser(responseUser.jsonPath().getString("accessToken"),Pens.USER_REMOVAL_DELETE);
     }
 

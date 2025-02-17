@@ -16,11 +16,20 @@ public class OrderSteps extends BaseHttpClient {
         return response;
     }
 
-    @Step("Получение списка заказов")
+    @Step("Получение списка заказов пользователя")
     public Response getOrderList(String token, String path) {
         Response response = given()
                 .spec(baseRequestSpec)
                 .header("authorization", token)
+                .when()
+                .get(path);
+        return response;
+    }
+
+    @Step("Получение списка зингридиентов")
+    public Response getOrderListAll(String path) {
+        Response response = given()
+                .spec(baseRequestSpec)
                 .when()
                 .get(path);
         return response;

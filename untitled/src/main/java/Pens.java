@@ -7,6 +7,6 @@ public class Pens {
     public static final String USER_AUTHORIZATION_POST= "/api/auth/login";
     public static final String ORDER_CREATE_POST = "/api/orders";
     public static final String ORDER_CHECK_GET = "/api/orders";
-    public static final String ORDER_CHECK_SPECIFIC_USER_GET = "api/orders";
+    public static final String OLL_INGRIDIENTS = "/api/ingredients";
 
 }
